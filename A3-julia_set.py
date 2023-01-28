@@ -1,6 +1,5 @@
 import argparse
 import numpy as np
-import matplotlib.pyplot as plt
 
 
 def set_julia(x_pixels, niter_max=100, output_file=None):
@@ -16,9 +15,6 @@ def set_julia(x_pixels, niter_max=100, output_file=None):
         Z[ndiv] = Z[ndiv]**2 + c[ndiv]
         div = np.abs(Z) > 2
         result[div & (result == (niter_max - 1))] = i
-    plt.figure(dpi=300)
-    plt.imshow(result.T, extent=[-2.0, 2.0, -1.5, 1.5])
-    plt.savefig("julia_set.png")
     if output_file:
         np.savez(output_file, result)
 
