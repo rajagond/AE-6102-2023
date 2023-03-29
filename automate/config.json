@@ -1,0 +1,14 @@
+{
+  "project_name": "automate",
+  "root": "automan",
+  "sources": [
+    "/home/raja/Desktop/Spring-2023/AE-6102-2023/automate"
+  ],
+  "workers": [
+    {
+      "host": "localhost",
+      "home": "",
+      "nfs": false
+    }
+  ]
+}
